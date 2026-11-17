@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>University Website</title>
+  <style>
+    /* i. Universal selector */
+    * {
+      font-family: Arial, sans-serif;
+    }
+
+    /* ii. Class selector */
+    .course {
+      color: blue;
+      font-weight: bold;
+    }
+
+    /* iii. ID selector */
+    #library {
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+
+    /* iv. Descendant selector */
+    .department p {
+      color: green;
+    }
+
+    /* v. Pseudo-class selector */
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+
+    /* vi. Attribute selector */
+    input[type="text"] {
+      border: 2px solid #1a1a2e;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Universal selector applies to all text -->
+  <h1>Welcome to University Portal</h1>
+
+  <!-- Class selector -->
+  <p class="course">Bachelor of Computer Science</p>
+
+  <!-- ID selector -->
+  <div id="library">
+    <h2>Library Section</h2>
+    <p>Access thousands of books and journals.</p>
+  </div>
+
+  <!-- Descendant selector -->
+  <div class="department">
+    <h2>Department of Engineering</h2>
+    <p>Offering Mechanical and Electrical Engineering programs.</p>
+  </div>
+
+  <!-- Pseudo-class selector -->
+  <p>Visit our <a href="#admissions">Admissions Page</a> for more info.</p>
+
+  <!-- Attribute selector -->
+  <form>
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" name="name">
+  </form>
+</body>
+</html>

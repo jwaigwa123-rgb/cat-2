@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Box Model - Visually Labelled</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        /* 1. MARGIN BOX (Outermost) */
+        .margin-box {
+            border: 2px dashed #e74c3c; /* Dashed line to show the invisible margin */
+            padding: 20px; 
+            background-color: #fdf2f2;
+        }
+
+        /* 2. BORDER BOX */
+        .border-box {
+            border: 4px solid #3498db; /* Solid line to represent the border */
+            padding: 20px; 
+            background-color: #f0f7fc;
+        }
+
+        /* 3. PADDING BOX */
+        .padding-box {
+            background-color: #e8f8f5; /* Light green to show padding area */
+            padding: 20px; 
+        }
+
+        /* 4. CONTENT BOX (Innermost) */
+        .content-box {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Styling for the visual labels */
+        .label {
+            display: block; /* Makes the label take up its own line */
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 15px; /* Pushes the next nested box down */
+        }
+
+        .label-margin { color: #e74c3c; }
+        .label-border { color: #3498db; }
+        .label-padding { color: #1abc9c; }
+        .label-content { color: #333333; }
+
+    </style>
+</head>
+<body>
+
+    <!-- OUTERMOST: MARGIN -->
+    <div class="margin-box">
+        <span class="label label-margin">MARGIN (Outer space separating elements)</span>
+        
+        <!-- SECOND LAYER: BORDER -->
+        <div class="border-box">
+            <span class="label label-border">BORDER (The line around the padding)</span>
+            
+            <!-- THIRD LAYER: PADDING -->
+            <div class="padding-box">
+                <span class="label label-padding">PADDING (Inner space)</span>
+                
+                <!-- INNERMOST LAYER: CONTENT -->
+                <div class="content-box">
+                    <span class="label label-content">CONTENT</span>
+                    <br><br>
+                    <strong>Product Title</strong><br>
+                    This is the product description.
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
